@@ -1,0 +1,69 @@
+body {
+	height: 100vh;
+	background: linear-gradient(to bottom, #69B5EB, #D8EEF3);
+	overflow: hidden;
+	position: relative;
+}
+.ground {
+	width: 100%;
+	height: 280px;
+	background: url(img/ground.png);
+	position: absolute;
+	left: 0;
+	bottom: -50px;
+	z-index: 2;
+	animation: ground 0.5s steps(2) infinite;
+	animation-play-state: paused;
+}
+@keyframes ground {
+	100% {background-position: 100% 0;}
+}
+.cloud {
+	width: 196px;
+	height: 99px;
+	background: url(img/cloud.png);
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: 3;
+	animation: clouds 56s linear infinite;
+	transform: translateX(1000%);
+	animation-play-state: paused;
+}
+@keyframes clouds {
+	100% {transform: translateX(-100%);}
+}
+.cloud2 {
+	top: 150px;
+	animation: clouds 54s linear infinite;
+	animation-play-state: paused;
+}
+.hero {
+	width: 108px;
+	height: 115px;
+	background: url(img/hero.png);
+	position: absolute;
+	bottom: 64px;
+	z-index: 4;
+	animation: hero 0.8s steps(7) infinite;
+	animation-play-state: paused;
+}
+@keyframes hero {
+	100% {background-position: -100% 0;}
+}
+.forest {
+	width: 100%;
+	height: 300px;
+	background: url(img/forest.png);
+	position: absolute;
+	left: 0;
+	bottom: 50px;
+	animation: forest 1s steps(2) infinite;
+	animation-play-state: paused;
+}
+@keyframes forest {
+	100% {background-position: 100% 0;}
+}
+.run {
+	animation-play-state: running;
+}
